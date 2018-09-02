@@ -1,0 +1,140 @@
+{%  extends "dependences/dependence_base.html" %}
+{% block page_title %}Listado{% endblock%}
+
+
+<!--===============================================================================================-->
+	{% load static %}
+	{% load staticfiles %}
+
+	{% block other_styles %}
+
+	
+
+	<link rel="icon" type="image/png" href="{% static 'tabla/images/icons/favicon.ico'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/vendor/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/vendor/animate/animate.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/vendor/perfect-scrollbar/perfect-scrollbar.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/css/main.css'%}">
+<!--===============================================================================================-->
+{% endblock%}
+
+{% block content%}
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					{% if dependences %}
+					<table>
+						<thead>
+							<tr class="table100-head">
+
+								<th scope="col" class="column2">Id</th>
+					            <th scope="col" class="column1">Codigo</th>
+					            <th scope="col"class="column1">Iniciales</th>
+					            <th scope="col" class="column1">Nombre</th>
+					            <th scope="col" class="column1">Gestion</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for dependence in dependences %}
+							<tr>
+					    	    <td scope="row">{{ dependence.id }}</td>
+					    	    <td>{{ dependence.code }}</td>
+					    	    <td>{{ dependence.initials }}</td>
+					    	    <td>{{ dependence.name }}</td>
+					    	    <td><a class="btn btn-primary" href="{% url 'dependences:edit' id_dependence=dependence.id %}">Editar</a>
+					    	    <a class="btn btn-danger" href="{% url 'dependences:delete' id_dependence=dependence.id %}">Eliminar</a></td>
+					        </tr>
+        					{% endfor %}
+
+
+						</tbody>
+					</table>
+					{% else %}
+				    	<h1>No hay dependencias disponibles</h1>
+				    {% endif %}
+				</div>
+
+				
+
+
+				<div>
+	    			<form method='POST' action='{% url 'dependences:search' %}'>
+						{% csrf_token %}
+						<p>Ingrese la palabra a buscar: <input name='key_word' type='text'></p>
+						<input type='submit' value='Buscar'>
+					</form>
+   				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<script>
+
+			$( document ).ready(function() {
+
+				$("#cosota").hide()
+			    $("#btnNuevo").click(function(){ 
+
+
+				
+				$("#cosota").fadeIn()
+
+				;
+				})
+
+			    console.log( "ready!" );
+			});
+			
+
+	</script>
+
+	<form id= "cosota" method='POST'> 
+
+			{% csrf_token %} 	
+				
+			<label>{{dependences.code.label}}</label> 	
+			{{ dependences.code }}
+
+			<label for="{{dependences.initials.name}}">{{dependences.initials.label}}</label> 	
+
+			{{dependences.initials}} 	
+
+			<label for="{{dependences.name.name}}">{{dependences.name.label}}</label> 	
+
+			{{dependences.name}} 	
+
+			
+
+			<button class="btn btn-primary"  type="submit" href="{% url 'dependences:list' %}">Enviar</button>
+
+	</form> 
+
+	
+
+<!--===============================================================================================-->
+	<script src="{% static 'tabla/vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tabla/vendor/bootstrap/js/popper.js'%}"></script>
+	<script src="{% static 'tabla/vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tabla/vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+
+
+	<script src="{% static 'tabla/js/main.js'%}"></script>
+	<button id="btnNuevo" >	Nuevo </button>
+
+
+	{% endblock %}

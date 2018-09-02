@@ -1,0 +1,24 @@
+
+
+{% block content %} 
+<form method='POST'> 	
+	{% csrf_token %} 	
+	<label for="{{form.code.name}}">{{form.code.label}}</label> 	
+	{{form.code}} 	
+
+	<label for="{{form.initials.name}}">{{form.initials.label}}</label> 	
+
+	{{form.initials}} 	
+
+	<label for="{{form.name.name}}">{{form.name.label}}</label> 	
+
+	{{form.name}} 	
+
+	<label for="{{form.parent.name}}">{{form.parent.label}}</label> 
+
+		{{form.parent}} 	
+
+		<button type="submit">Crear</button> 
+
+</form> {% endblock %}
+

@@ -1,0 +1,32 @@
+{%  extends "users/base_registry.html" %}
+
+{% block page_tittle %}
+	Completed
+{% endblock %}
+
+{% load staticfiles %}  
+{% block content%}
+	<div class="main row">
+	<div class="container col-12 col-sm-12 col-md-12	col-lg-12 col-xl-12">
+		<div class="contain">
+			<h1> <img src="{% static 'img/logo.png' %}" alt=""></h1>
+		</div>
+		<hr>
+		<br>
+		<div class="contain content">
+			<!-- Formulario -->
+			<form class="form">
+				<fieldset>
+					<!-- Mensaje principal -->
+					<header class="step_reset_pass">
+						<h3 class="text-center">
+							Su contraseña se ha reestablecido correctamente
+						</h3>
+						<br><br><br>
+					</header>
+				</fieldset>	
+				<p class="text-center"><a class="btn step_reset_pass" href="{% url 'login' %}">Login</a></p>
+			</form>
+		</div>
+	</div>	
+{% endblock %}

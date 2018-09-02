@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <!--Link panel de notificaciones-->
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+  <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+  <link rel="stylesheet" href="../../statics/style.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Monoton" rel="stylesheet">
+  
+</head>
+
+<body> 
+
+  	<aside class="sidebar">   		
+			<div class="page-wrapper cool-theme toggled">
+				<a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+	       <i class="fas fa-bars"></i>
+	      </a>			
+
+	  		<div class="sidebar-brand">
+	        <a href="#">Argopy</a>
+	        <div id="close-sidebar">
+	          <i class="fas fa-times"></i>
+	        </div>
+	      </div>
+
+			<!-- notificaciones  -->
+			<nav id="sidebar" class="sidebar-wrapper ">
+	  		  <ul class="menu">
+						<li>
+						<a href="#">
+      				<i class="fa fa-bell"></i>
+      				<span class="badge badge-pill badge-warning notification">3</span>
+    				</a>							
+						</li>	  		
+		    		<li>
+							<a href="#">
+		      		<i class="fa fa-envelope"></i>
+		      		<span class="badge badge-pill badge-success notification">7</span>
+		    			</a>		
+						</li>
+		    		
+		    		<li>
+							<a href="#">
+								<i class="fa fa-cog"></i><span class="badge-sonar"></span>
+							</a>	
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-power-off"></i></a>
+						</li>
+					</ul>
+					
+  		</div>
+
+
+    	<div class="sidebar-header">
+        <div class="user-pic">
+        <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/bootstrap4/assets/img/user.jpg" alt="User picture">
+        </div>
+        <div class="user-info">
+   {% if user.is_authenticated %}
+          <span class="user-name">{{ user.get_username }}<strong> Antonio</strong></span>
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+   {% endif %} 
+          <span class="user-role">Gerente</span>         
+        </div>
+      </div> 
+
+	<!-- Caja de Busqueda --> 
+    <div class="sidebar-search">
+      <div>
+        <div class="input-group">
+          <input type="text" class="form-control search-menu" placeholder="Busqueda...">
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+		<!-- ************************************************************* -->
+		<!-- Menu de opciones -->  
+    <nav class="sidebar-nav"> 
+      <ul>
+        <li>
+          <a href="#"><i class="icon ion-home"></i> <span>Inicio</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="icon ion-person"></i>Opci&oacuten 1</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ion-person-add"></i>Opci&oacuten 2</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ion-person-stalker"></i>Opci&oacuten 3</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-heart-broken"></i>Opci&oacuten 4</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="icon ion-clipboard"></i> <span class="">Documentos</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="icon ion-compose"></i>Edici&oacuten</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ion-cloud"></i>Nube</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ion-printer"></i>Impresi&oacuten</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ion-email"></i>Compartir</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-briefcase-outline"></i> <span class="">Radicaci&oacuten</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-flame-outline"></i>Opci&oacuten 1</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-lightbulb-outline"></i>Opci&oacuten 2</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-location-outline"></i>Opci&oacuten 3</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-locked-outline"></i>Opci&oacuten 4</a>
+            </li>
+             <li>
+              <a href="#"><i class="ion-ios-navigate-outline"></i>Opci&oacuten 5</a>
+            </li>
+          </ul>
+        </li>              
+        <li>
+          <a href="#"><i class="icon ion-trash-a"></i> Papelera</a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="icon ion-medkit"></i>Opci&oacuten 1</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ion-image"></i>Opci&oacuten 2</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon ion-bug"></i>Opci&oacuten 3</a>
+            </li>            
+          </ul>
+        </li>
+      </ul>
+    </nav>
+	<!-- ************************************************************* -->
+  </aside>
+</section>
+  
+
+
+	<!-- Pie de pagina -->
+	<footer>      
+    <div class="contenedor-pie">
+      <div class="footer">
+        <div class="copyright">
+                © 2018 Todos los Derechos Reservados | <a href="">ArgoPy</a>
+        </div>
+        <div class="information">
+          <a href="">Organizaci&oacuten</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+        </div>
+      </div>
+    </div>        
+  </footer> 
+
+</body>
+</html>

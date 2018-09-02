@@ -1,0 +1,293 @@
+
+/*	src: local('Helvetica Neue LTStd'),
+		 url(opensans.eot) format('embedded-opentype'),
+         url(opensans.ttf) format('truetype'),
+         url(opensans.otf) format('opentype'),
+         url(opensans.woff) format('woff');*/
+
+/* -------- Helvetica Neue LT Std 47 -------- */
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_47';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/HelveticaNeueLTStd-LtCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_47_(2)';/*cursiva*/
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-LtCnO.otf) format('opentype');
+    }
+    /* -------- Helvetica Neue LT Std 77 -------- */
+@font-face {	
+    font-family: 'Helvetica_Neue_LT_Std_77';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-BdCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_77_(2)';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-BdCnO.otf) format('opentype');
+    }
+    /* -------- Helvetica Neue LT Std 87 -------- */
+@font-face {    
+    font-family: 'Helvetica_Neue_LT_Std_87';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-HvCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_87_(2)';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-HvCnO.otf) format('opentype');   
+}
+
+/* -------- 0. RESET -------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* { box-sizing:border-box;}
+
+input, select, textarea { 
+	margin: 0;
+	padding: 0;
+	font:400 13px/1 'Helvetica_Neue_LT_Std_47';
+}
+
+
+/* -------- ************************************* -------- */
+
+body{
+	/*background: rgba(19, 35, 47, 0.9);*/
+	background: #ededed; 
+	font-family: 'Helvetica_Neue_LT_Std_47';
+}
+
+fieldset{  
+	width:auto;
+	height: auto;
+	position: relative;
+	border: 2px solid #583e7e;
+	background: #e9e9e9;
+	border-radius: 22px;
+	/*Sombra del formulario*/
+	-webkit-box-shadow: -2px 3px 20px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 3px 20px -2px rgba(0,0,0,0.75);
+	box-shadow: -2px 3px 20px -2px rgba(0,0,0,0.75);
+}
+
+/* -------- FORM -------- */
+.columns_div { /*Organización dentro del form*/
+    display: inline-block;
+    margin-bottom: 80px;    
+    padding: 0 20px;   
+    text-align: left;
+}
+/* -------- LOGO -------- */
+
+.contain img{ /*tamaño de la imagen*/
+	display:block;
+	height: 40%;
+	margin:auto;
+	padding: 20px 0;	
+	width: 40%;
+}
+hr {
+	height: 10px;
+ 	width: 80%;
+	border: 3px solid #bcbcbc; /*Linea hr: #bcbcbc*/
+	border-radius: 300px/10px; 
+	height: 0px; 
+	text-align: center;
+}
+
+/* Centrar Formulario */
+
+.contain_form{
+	left:50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%); 
+	width: 300px;
+		
+}
+
+.contain_form.reset_pass{
+	left:50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%); 
+	width: 400px;
+		
+}
+/* Eliminar scroll */
+
+@media (max-width: 400px){
+	.contain_form{
+		width: 97%;
+	}
+}
+
+
+/* ------------------------------------ */
+	.contain_form h2{
+		color: #583e7e;
+		font-family: 'Helvetica_Neue_LT_Std_77';
+		font-size: 18px;
+		text-align: center;
+	}
+
+/* -------- FORM -------- */
+
+.form input[type="text"], .form input[type="email"], .form input[type="password"]{
+	background: white;
+	border: 0;
+	display: block;
+	height: 40px;
+	margin-bottom: 25px;
+	padding: 5px;
+	position: center;	
+	width: 100%;
+}
+
+.form label{
+	color: black;
+	display: block; /*debajo uno de otro*/
+	font-family: 'Helvetica_Neue_LT_Std_77';
+	font-size: 15px;
+	margin-bottom: 5px; /*espacio debajo del label*/ 
+	padding: 5px; 
+	/*text-transform: lowercase;	*/
+}
+.form input[type="submit"]{
+	background: #583e7e; /*Color botón*/
+	border-radius: 6px;
+	color: white; /*color texto*/
+	font-family: 'Helvetica_Neue_LT_Std_87';
+	font-size: 18px; /*tamaño de la fuente*/
+	padding: 10px 30px;/*espaciado tanto por arriba como por los lados*/
+	position: center;
+	text-align: center; /*Texto centrado*/
+}
+	.form .tooltip_ask{
+		background: #583e7e; /*color de fondo*/
+		border-radius: 50%; /*circulo para la incognita*/		
+		color: white; /*color de base*/
+		display: inline-block; /*Por ser un 'span', para modificar ancho y alto */
+		height: 15px; /*Medida proporcional*/
+		line-height: 15px; /*Altura de linea*/
+		text-align: center; /*Centrar la incognita en el texto*/
+		vertical-align: middle; /*Alinear junto co el texto ubicado a su lado*/
+		width: 15px; /*Medida proporcional*/
+	}
+	.form label, .form .tooltip_ask {
+    	display: inline-block;
+	}
+.columns_div{
+	padding: 20px;
+}
+.columns_div a span{	
+	color:#583e7e;
+	font-size: 18px; /*tamaño de la fuente*/
+	padding: 10px 30px;/*espaciado tanto por arriba como por los lados*/
+	position: center;
+	text-align: center;
+	text-decoration: none;
+}
+
+.form .columns_div a{
+	color: black;
+	font-family: 'Helvetica_Neue_LT_Std_87';	
+	font-size: 14px; /*tamaño de la fuente*/
+	text-align: center;	
+	text-decoration: none;
+}
+.form input:focus{
+	background: #dccdf9;
+	color: black;
+}
+
+	a.forget {		
+	    bottom: 50px;
+	    margin-left: 13%;
+	    position: absolute;
+	}
+
+/* ---------------- tooltip ---------------- */
+.tooltip1 {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {	
+    visibility: hidden;
+    width: 200px;
+    height: auto;
+    background-color: #9F9F9F;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    text-decoration: none;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip1:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

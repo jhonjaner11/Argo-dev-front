@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style_form.css">
+	<!-- Responsive -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style_form.css">
+	
+</head>
+
+<body>
+	<div class="container form_general">
+		<form action="">
+			<fieldset>
+				<!-- Nombre del Formulario -->
+				<div class="main row" >					
+					<div class="clearfix visible-xl-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<div class="title-form ">
+							<!-- label -->
+							<h1> Nombre del formulario</h1>
+							<h6> Detalles del formulario</h6>
+						</div>								
+					</div>		
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+<!-- ********************* SECTION ********************* -->
+
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>Tabs</legend>
+	</fieldset>
+</div>
+<br>
+
+<!-- ********************* TABS ********************* -->
+
+<div class="container">
+	<!-- Tabs -->
+	<div class="tab tab_form_argopy">
+	  <button class="tablinks" onclick="openTabs(event, 'First')" id="defaultOpen">First</button>
+	  <button class="tablinks" onclick="openTabs(event, 'Second')">Second</button>
+	  <button class="tablinks" onclick="openTabs(event, 'Third')">Third</button>
+	</div>
+	
+	<!-- Content -->
+	<div id="First" class="tabcontent">
+	  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	  <h3>First</h3>
+	  <p >Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</p>
+	</div>
+
+	<div id="Second" class="tabcontent">
+	  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	  <h3>Second</h3>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+	<div id="Third" class="tabcontent">
+	  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	  <h3>Third</h3>
+	  <p>Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</p>
+	</div>
+</div>
+
+<!-- ********************* Campos de Texto ********************* -->
+
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>Textbox</legend>
+	</fieldset>
+</div>
+<br><br>
+<div class="input-container">
+	<input type="text" id="" required="" />
+	<label for="">Username</label>
+	<div class="bar"></div>
+</div>
+<div class="input-container">
+	<input type="password" id="" required=""/>
+	<label for="">Password</label>
+	<div class="bar"></div>
+</div>
+
+<!-- ********************* Botones ********************* -->
+
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>Buttons</legend>
+	</fieldset>
+</div>
+<br><br>
+<div class="container">
+	<div class="row form_section" align="center">
+		<input type="submit" value="Sign In" >
+		<button >Button</button>
+		<button><i class="fa fa-search "></i></button>
+		<button class="btn"><i class="fa fa-download"></i> Download</button>
+	</div>						
+</div>
+
+<!-- ********************* Silder ********************* -->
+
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>Slider</legend>
+	</fieldset>
+</div>
+<br>
+<div class="container">
+	<div class="range-slider">
+	  <input class="range-slider__range" type="range" value="100" min="0" max="500">
+	  <span class="range-slider__value">0</span>
+	</div>
+</div>
+<br>
+<div class="container">
+	<div class="range-slider">
+	  <div id="slider_argopy_range"></div>
+	</div>
+</div>
+
+<!-- ********************* Checkbox ********************* -->
+
+<div class="container form_section">
+	<fieldset>
+		<legend>Checkbox</legend>
+	</fieldset>
+</div>
+<br><br>
+<div class="container">
+	<label class="checkbox_argopy_form">
+	  <input type="checkbox" checked>
+	  <span class="checkbox_argopy_icon"></span>
+	  Option 1
+	</label>
+
+	<label class="checkbox_argopy_form">
+	  <input type="checkbox" checked>
+	  <span class="checkbox_argopy_icon"></span>
+	  Option 2
+	</label>
+
+	<label class="checkbox_argopy_form">
+	  <input type="checkbox" checked>
+	  <span class="checkbox_argopy_icon"></span>
+	  Option 3
+	</label>
+</div>
+<br>
+
+<!-- ********************* True/False ********************* -->
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>True/False</legend>
+	</fieldset>
+</div>
+<br><br>
+<div class="container">
+	<div class="switch_box box_4">
+		<div class="input_wrapper">
+			<label for="Boolean">False</label>
+			<input id="Boolean" type="checkbox" class="switch_4">	
+			<label for="Boolean">True</label>		
+		</div>
+	</div>	
+</div>
+<br>
+<!-- ********************* RadioButton ********************* -->
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>RadioButton</legend>
+	</fieldset>
+</div>
+<br>
+<form class="form">
+	<div class="container">
+		<div class="radioButton">
+			
+		  <input type="radio" id="option1" name="format" checked/>
+		  <label for="option1">Option 1</label>
+
+		  <input type="radio" id="option2" name="format" />
+		  <label for="option2">Option 2</label>
+
+		  <input type="radio" id="option3" name="format" />
+		  <label for="option3">Option 3</label>
+		
+		</div>
+	</div>
+</form>
+
+
+<!-- ***************** Listas y listas multiples ***************** -->
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>List</legend>
+	</fieldset>
+</div>
+<br>
+<div class="container">
+	<div include="form-input-select()">
+	  <select required>
+	    <option value="" hidden>Select</option>
+		<!--Options-->
+	    <option value="1">Option 1</option>
+	    <option value="2">Option 2</option>
+	    <option value="3">Option 3</option>
+	    <option value="4">Option 4</option>
+	    <option value="5">Option 5</option>
+	  </select>
+	</div>
+</div>
+
+
+
+<!-- ********************* File ********************* -->
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>File</legend>
+	</fieldset>
+</div>
+<br><br>
+<form class="form_type_file">
+	<div class="container">
+	  	<div class="columns_div file photo-profile-icon">
+			<input type="file"><!-- imagen -->
+		</div>
+		<div class="columns_div file file-icon">
+			<input type="file"><!-- imagen -->
+		</div>
+		<div class="columns_div file music-icon">
+			<input type="file"><!-- imagen -->
+		</div>
+	</div>
+</form>			
+<br>
+
+<!-- ********************* Date ********************* -->
+
+<!-- ********************* Text Area ********************* -->
+
+<!-- ********************* Selectmenu ********************* -->
+
+<!-- ********************* Spinner ********************* -->
+
+<!-- ********************* Progressbar ********************* -->
+
+<!-- ********************* Dialog ********************* -->  
+
+<!-- ********************* pagination ********************* -->  
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>Pagination</legend>
+	</fieldset>
+</div>
+<br>
+<form class="form">
+	<div class="container">
+		<nav class="pagination" role="navigation">
+			<a class="prev" href="#">Prev</a>
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a class="active" href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a class="next" href="#">Next</a>
+		</nav>
+	</div>
+</form>			
+<br>
+
+<!-- ********************* breadcrumb ********************* --> 
+<br>
+<div class="container form_section">
+	<fieldset>
+		<legend>Breadcrumb</legend>
+	</fieldset>
+</div>
+<br>
+<div class="container">
+	<div class="light placeholder">
+	  <div class="breadcrumb">
+	    <a href="#">One</a><a href="#">Two</a><a href="#">Three</a><a href="#">Four</a>
+	  </div>
+	</div>
+</div> 
+
+<br><br><br>
+
+
+
+	<!-- JavaScript Bootstrap  -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/js_form_argopy.js"></script>
+
+
+</body>
+</html>

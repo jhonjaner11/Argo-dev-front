@@ -1,0 +1,148 @@
+/* -------- Colors -------- *//*
+
+1. Azul Oscuro: #2773e6
+2. Azul Suave: #9cc6f7
+3. Gris Oscuro: #9F9F9F
+4. Gris Claro: #e9e9e9 
+
+*//* -------- ********* -------- */
+
+/* -------- Logo -------- */
+
+.contain img{ /*tamaño de la imagen*/
+	content: url(../logo_blue.svg);
+}
+
+/* -------- form -------- */
+
+.contain_form h2{
+	color: #2773e6;/*Azul Oscuro*/
+	}
+
+.form input[type="submit"]{
+	background: #2773e6; /*Azul Oscuro*/
+}
+.columns_div a span{	
+	color:#583e7e;/*Azul Oscuro*/
+}
+.form input:focus{
+	background: #9cc6f7; /*Azul super claro*/
+	color: black;
+}
+
+/* -------- form  -------- */
+.contain header h2{
+	color: #2773e6;/*Azul Oscuro*/
+}
+/* -------- Nav Registry  -------- */
+nav.navar {	
+    background: #9F9F9F; /*Gris Oscuro*/     
+}
+
+	.item span:first-child {
+		background: #9F9F9F; /*Gris Oscuro*/ 
+		color: #fff; 		
+	}
+	.item span:last-child {
+		color: #9F9F9F;		/*Gris Oscuro*/ 
+	}
+		.active span:first-child{
+			background: #2773e6;/*Azul Oscuro*/
+				
+		}
+		.active span:last-child{
+			color:#2773e6;/*Azul Oscuro*/
+		}
+/* -------- Line Menu Registry  -------- */
+
+.form .all{
+	background: #fff; /*Blanco*/
+}
+
+/*Icono de interrogacion*/
+.form .tooltip_ask{
+	background: #2773e6; /*Azul Oscuro*/
+	color: #fff; /*Blanco*/	
+}
+
+.columns_div.file {
+    background: #e9e9e9; /*Gris Claro*/ 
+}
+.form input:focus, .form textarea:focus{
+	background: #9cc6f7; /*Azul super claro*/
+	color: black;	
+}
+
+.btn{
+	background: #2773e6; /*Azul Oscuro*/
+}
+.columns_div a span {
+    color: #2773e6; /*Azul Oscuro*/
+}
+.form .all a {
+    color: #2773e6; /*Azul Oscuro*/
+}
+
+/***************** Linea superior pasos de registro ********************/
+.paso-1 nav.navar{
+	background: rgba(39,115,230,1);
+	background: -moz-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(39,115,230,1)), color-stop(20%, rgba(39,115,230,1)), color-stop(20%, rgba(159,159,159,1)), color-stop(100%, rgba(159,159,159,1)));
+	background: -webkit-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: -o-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: -ms-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: linear-gradient(to right, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);	
+	height: 15px;  
+    margin-top: 15px;
+	} 
+.paso-2 nav.navar{
+	background: rgba(39,115,230,1);
+	background: -moz-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(39,115,230,1)), color-stop(43%, rgba(39,115,230,1)), color-stop(43%, rgba(159,159,159,1)), color-stop(100%, rgba(159,159,159,1)));
+	background: -webkit-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: -o-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: -ms-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: linear-gradient(to right, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	height: 15px;  
+    margin-top: 15px;
+	} 
+.paso-3 nav.navar{ 
+    background: rgba(39,115,230,1);
+	background: -moz-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(39,115,230,1)), color-stop(61%, rgba(39,115,230,1)), color-stop(61%, rgba(159,159,159,1)), color-stop(100%, rgba(159,159,159,1)));
+	background: -webkit-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: -o-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: -ms-linear-gradient(left, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: linear-gradient(to right, rgba(39,115,230,1) 0%, rgba(39,115,230,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	height: 15px;  
+    margin-top: 15px;
+}
+.paso-4 nav.navar{ 
+    background: #2773e6; /*Azul Oscuro*/  
+    height: 15px;  
+    margin-top: 15px;
+    width: 99%;
+}
+
+.login_fieldset {
+    border: 2px solid #2773e6; /*Azul Oscuro*/
+}
+
+/* ------------------ Home -------------------- */
+/* header */
+.panel_sup div.contain{
+  border-bottom: 1px inset #8c8b8b; /*Borde inferior div*/
+}
+/* Menu */
+.menu-left {
+  background:#2773e6;
+  border-right:1px solid #2773e6;  
+}
+.menu-left li>a {
+  color:#fff;
+}
+
+.menu-left li:hover>a,nav.menu-left.active>a{
+color:#2773e6;
+background-color:#9cc6f7;
+}

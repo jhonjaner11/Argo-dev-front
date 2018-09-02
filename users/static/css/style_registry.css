@@ -1,0 +1,545 @@
+/****
+STYLES GUIDE:
+0. RESET
+1. 
+2. 
+3. 
+4. FORM
+-----------------
+*/
+
+/* -------- Helvetica Neue LT Std 47 -------- */
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_47';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/HelveticaNeueLTStd-LtCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_47_(2)';/*cursiva*/
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-LtCnO.otf) format('opentype');
+    }
+/* -------- Helvetica Neue LT Std 77 -------- */
+@font-face {	
+    font-family: 'Helvetica_Neue_LT_Std_77';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-BdCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_77_(2)';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-BdCnO.otf) format('opentype');
+    }
+/* -------- Helvetica Neue LT Std 87 -------- */
+@font-face {    
+    font-family: 'Helvetica_Neue_LT_Std_87';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-HvCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_87_(2)';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-HvCnO.otf) format('opentype');   
+}
+
+/* -------- Lemon/Milk -------- */
+@font-face {
+    font-family: 'Lemon/Milk';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/LemonMilk.otf.otf) format('opentype');   
+}
+/* ---------------- LIBERATION SANS ---------------- */
+
+/* Liberation Sans: Bold */
+@font-face {
+    font-family: 'Liberation Sans B';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-Bold.ttf) format('truetype');
+}
+/* Liberation Sans: Bold Italic */
+@font-face {
+    font-family: 'Liberation Sans BI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-BoldItalic.ttf) format('truetype');
+}
+/* Liberation Sans: Italic */
+@font-face {
+    font-family: 'Liberation Sans I';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-Italic.ttf) format('truetype');
+}
+/* Liberation Sans: Regular */
+@font-face {
+    font-family: 'Liberation Sans R';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-Regular.ttf) format('truetype');
+}
+
+/* ---------------- NIMBUS SANS ---------------- */
+
+/* Nimbus Sans L: Bold */
+@font-face {
+    font-family: 'Nimbus Sans B';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-Bold.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Bold Cond */
+@font-face {
+    font-family: 'Nimbus Sans BC';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-BoldCond.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Bold Cond Italic*/
+@font-face {
+    font-family: 'Nimbus Sans BCI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-BoldCondItal.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Bold Italic */
+@font-face {
+    font-family: 'Nimbus Sans BI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-BoldItal.ttf) format('truetype');   
+}
+
+/* Nimbus Sans L: Regular */
+@font-face {
+    font-family: 'Nimbus Sans R';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-Regu.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Regular Italic */
+@font-face {
+    font-family: 'Nimbus Sans RI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-ReguItal.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Regular Cond */
+@font-face {
+    font-family: 'Nimbus Sans RC';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-ReguCond.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Regular Cond Italic*/
+@font-face {
+    font-family: 'Nimbus Sans RCI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-ReguCondItal.ttf) format('truetype');   
+}
+
+/* -------- 0. RESET -------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* { box-sizing:border-box;}
+
+input, select, textarea { 
+	font:400 13px/1 'Roboto';
+	margin: 0;
+	padding: 0;
+}
+
+
+/* -------- ************************************* -------- */
+
+body{
+	/*background: rgba(19, 35, 47, 0.9);*/
+	background: #ededed; 
+	font-family: 'Helvetica_Neue_LT_Std_47';
+}
+
+fieldset{
+	margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    padding: 0;
+
+    -webkit-margin-end: 2px;
+    -webkit-margin-start: 2px;
+    -webkit-padding-after: 0.625em;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-start: 0.75em;
+    display: block;
+    min-width: -webkit-min-content;
+}
+
+
+
+
+
+/* -------- 1. LAYOUT -------- */
+.contain { max-width: 1024px; margin: 0 auto;}
+.navbar { width: 100%;}
+.content { display: flex; flex-flow:column; width: 100%;}
+
+
+	.paso-1, .paso-2, .paso-3 { justify-content: flex-start;}
+.contain .content > div:last-child {
+  display: none;
+}
+	.paso-4 .content { 
+		align-items:center; 
+		text-align: center;
+	}
+
+	
+
+/* -------- 2. CONTAIN -------- */
+.contain header{
+	width: 100%;
+	/*height: 100%;*/
+}
+
+.contain header h2{
+	color: #583e7e;
+	font-family: 'Helvetica_Neue_LT_Std_87';
+	font-size: 30px;
+	padding: 30px;
+	text-align: center;
+}
+.contain header p{	
+	font-family: Arial bold;
+	font-size: 20px;
+	text-align: justify;
+}
+.contain img{ /*temaño de la imagen*/
+	height: 75px;	
+	width: auto;
+	/*
+	height: 20%;	
+	width: 20%;
+	*/
+}
+
+/* -------- 3. NAV -------- */	
+nav.navar {	
+	display: flex;
+	font-family: 'Helvetica_Neue_LT_Std_77';
+	vertical-align:middle;
+    background: #9F9F9F; /*Linea gris*/    
+    height: 15px;  
+    justify-content: space-evenly;
+    margin-top: 15px;    
+}
+
+nav.navar span {
+    margin-top: -21px; /*Ubicación linea gris centrado verticalemnte*/
+}
+
+.navbar .item { 
+	align-items:center; 
+	display: flex; 
+	flex-flow:column; 
+	font-size: 11px;	
+	justify-content:flex-start; 
+	width: 33%; 
+}
+
+		.item span:first-child {
+			background: #9F9F9F;		
+			border-radius: 10%; 
+			color: #fff; 
+			font-size: 55px; 
+			font-weight: bold; 
+			margin-bottom: 10px;
+			margin-left: 30%; /*centrar los numero para distribuirlos*/
+			margin-right: 30%;
+			padding: 10px 20px;/*espaciado tanto por arriba como por los lados*/
+			text-align: center;			 
+		}
+		.item span:last-child {	
+			color: #9F9F9F;
+			font-size: 15px;
+			justify-content: space-between; 		
+			margin-left: 20px;
+			margin-top: 30px;
+			position: absolute;
+			text-align: center;
+			width:10%;
+			/*width: 120px;		
+			text-align: center;
+			font-size: 15px;
+			color: #9F9F9F;
+			margin-top: 30px;			
+			/*position: absolute;	*/		
+		}
+
+		.active span:first-child{
+			background: #583e7e;
+		}									
+		.active span:last-child{
+			color:#583e7e;
+		}
+.paso-1 nav.navar{
+	background: rgba(88,62,126,1);
+	background: -moz-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(88,62,126,1)), color-stop(20%, rgba(88,62,126,1)), color-stop(20%, rgba(159,159,159,1)), color-stop(100%, rgba(159,159,159,1)));
+	background: -webkit-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: -o-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: -ms-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	background: linear-gradient(to right, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 20%, rgba(159,159,159,1) 20%, rgba(159,159,159,1) 100%);
+	height: 15px;  
+    margin-top: 15px;
+	} 
+.paso-2 nav.navar{
+    background: rgba(88,62,126,1);
+	background: -moz-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(88,62,126,1)), color-stop(43%, rgba(88,62,126,1)), color-stop(43%, rgba(159,159,159,1)), color-stop(100%, rgba(159,159,159,1)));
+	background: -webkit-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: -o-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: -ms-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	background: linear-gradient(to right, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 43%, rgba(159,159,159,1) 43%, rgba(159,159,159,1) 100%);
+	height: 15px;  
+    margin-top: 15px;
+	} 
+.paso-3 nav.navar{ 
+    background: rgba(88,62,126,1);
+	background: -moz-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(88,62,126,1)), color-stop(61%, rgba(88,62,126,1)), color-stop(61%, rgba(159,159,159,1)), color-stop(100%, rgba(159,159,159,1)));
+	background: -webkit-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: -o-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: -ms-linear-gradient(left, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	background: linear-gradient(to right, rgba(88,62,126,1) 0%, rgba(88,62,126,1) 61%, rgba(159,159,159,1) 61%, rgba(159,159,159,1) 100%);
+	height: 15px;  
+    margin-top: 15px;
+}
+.paso-4 nav.navar{ 
+    background: #583e7e; /*Linea gris*/    
+    height: 15px;  
+    margin-top: 15px;
+    width: 99%;
+}
+
+/* -------- 4. FORM -------- */
+
+.columns_div { /*Organización dentro del form*/
+    /*display: inline-block;
+    width: 33%;
+    margin-bottom: 10px; 
+    padding: 0 20px;
+    vertical-align: top;
+    text-align: left;*/
+}
+
+.form{
+	padding: 60px;
+}
+.form header p{
+	font-family: 'Helvetica_Neue_LT_Std_47';
+}
+.form .all{
+	background: #fff; 
+	display: block; 
+	margin-bottom: 60px;
+	padding: 15px; 
+	width: 100%; 
+}
+.form .all a{
+	color: #583e7e;
+}
+
+.form label{
+	/*text-transform: lowercase;	*/
+	color: black;
+	display: block; /*debajo uno de otro*/ 
+	font-family: 'Helvetica_Neue_LT_Std_77';
+	font-size: 15px;
+	margin-bottom: 5px; /*espacio debajo del label*/ 
+}
+.form label, .form .tooltip_ask {
+    	display: inline-block;
+	}
+.form textarea, .gender, .form input[type="text"],.form input[type="email"], .form input[type="password"], .form select{
+	background: white;
+	border: 0;
+	display: block;
+	font-family: 'Helvetica_Neue_LT_Std_47';	
+	height: 40px;
+	margin-bottom: 25px;
+	padding: 5px;
+	width: 100%;
+}
+	.form textarea{
+		background: transparent;
+		height: 100px;
+		margin-bottom: 10px;
+		padding-top: 10px;
+	}
+
+.form input[type="submit"]{
+	background: #583e7e; /*Color botón*/
+	border-radius: 6px;
+	color: white; /*color texto*/
+	font-family: 'Helvetica_Neue_LT_Std_87';
+	font-size: 18px; /*tamaño de la fuente*/
+	padding: 10px 30px;/*espaciado tanto por arriba como por los lados*/
+	position: center;
+	text-align: center; /*Texto centrado*/
+}
+.form input[type="checkbox"]{
+	background: white;
+	border: 0;
+	display: inline-block;
+	height: 20px;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	width: 25px;
+}
+	.form .tooltip_ask{
+		background: #583e7e; /*color de fondo*/
+		border-radius: 50%; /*circulo para la incognita*/		
+		color: white; /*color de base*/
+		display: inline-block; /*Por ser un 'span', para modificar ancho y alto */
+		height: 15px; /*Medida proporcional*/
+		line-height: 15px; /*Altura de linea*/
+		text-align: center; /*Centrar la incognita en el texto*/
+		vertical-align: middle; /*Alinear junto co el texto ubicado a su lado*/
+		width: 15px; /*Medida proporcional*/
+
+	}
+		.form input[type="text"].small{
+			display: inline-block; /*Todas las cajas en una linea, una al lado de la otra*/
+			margin-right: 11px; /*Margen a la derecha que deberá aplicarse solo a 2 primeras cajas*/
+			width: 27%; /*Cajas de fechas mas pequeñas*/
+		}
+		.columns_div.file {
+		    background: #ededed url(../img/icon_photo.png) no-repeat center center;
+		    background-size: 90% 95%;		    
+		    height: 250px;
+		}
+		.form input[type="file"]{
+			cursor: pointer; /*Cursor cambie por una mano*/
+			height: 100%;
+			opacity: 0; /*este presente el input pero este oculto*/
+			width: 100%;
+		}
+		.form .birth_date .small:last-child{
+			margin-right: 0px; /*Margen a la derecha, eliminado de la última caja*/
+		}
+
+.form input:focus, .form textarea:focus{
+	background: #dccdf9;
+	color: black;	
+}
+
+.gender{
+	display: flex;
+	position: center;	
+}
+.form input[type="datetime-local"]{
+	background: white;
+	border: 0;
+	display: block;
+	font-family: 'Helvetica_Neue_LT_Std_47';	
+	height: 40px;
+	margin-bottom: 25px;
+	padding: 5px;
+	width: 100%;
+}
+.gender label{ 
+	margin-left: 5px;
+
+}
+.gender input{
+	margin-left: 30px; 
+}
+/* -------- Botton Radio Gener -------- */
+
+.btn{
+	background: #583e7e; /*Color botón*/
+	border-radius: 6px;
+	color: white; /*color texto*/
+	font-family: 'Helvetica_Neue_LT_Std_87';
+	font-size: 18px; /*tamaño de la fuente*/
+	padding: 10px 30px;/*espaciado tanto por arriba como por los lados*/
+	position: center;
+	text-align: center; /*Texto centrado*/
+	text-decoration: none;
+}
+
+/* -------- Reset Password -------- */
+.form .step_reset_pass h2, .form .step_reset_pass p{
+	text-align: center;	
+}
+
+.form .step_reset_pass h3{
+	font-family: 'Helvetica_Neue_LT_Std_47';
+	font-size: 25px;
+	color: #000;	
+}
+
+a.step_reset_pass:hover  {
+	color: white;
+}

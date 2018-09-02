@@ -1,0 +1,224 @@
+/*  
+FONTS:
+1. Liberation Sans - License: GPL / Open Font License
+2. Nimbus Sans L - License: GNU
+3. ArchivoNarrow - License: Open Font License
+4. Helvetica Neue - 
+*/
+
+/* ---------------- LIBERATION SANS ---------------- */
+
+
+/* Liberation Sans: Bold */
+@font-face {
+    font-family: 'Liberation Sans B';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-Bold.ttf) format('truetype');
+}
+/* Liberation Sans: Bold Italic */
+@font-face {
+    font-family: 'Liberation Sans BI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-BoldItalic.ttf) format('truetype');
+}
+/* Liberation Sans: Italic */
+@font-face {
+    font-family: 'Liberation Sans I';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-Italic.ttf) format('truetype');
+}
+/* Liberation Sans: Regular */
+@font-face {
+    font-family: 'Liberation Sans R';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/LiberationSans-Regular.ttf) format('truetype');
+}
+
+
+/* ---------------- NIMBUS SANS ---------------- */
+
+/* Nimbus Sans L: Bold */
+@font-face {
+    font-family: 'Nimbus Sans B';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-Bold.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Bold Cond */
+@font-face {
+    font-family: 'Nimbus Sans BC';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-BoldCond.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Bold Cond Italic*/
+@font-face {
+    font-family: 'Nimbus Sans BCI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-BoldCondItal.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Bold Italic */
+@font-face {
+    font-family: 'Nimbus Sans BI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-BoldItal.ttf) format('truetype');   
+}
+
+/* Nimbus Sans L: Regular */
+@font-face {
+    font-family: 'Nimbus Sans R';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-Regu.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Regular Italic */
+@font-face {
+    font-family: 'Nimbus Sans RI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-ReguItal.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Regular Cond */
+@font-face {
+    font-family: 'Nimbus Sans RC';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-ReguCond.ttf) format('truetype');   
+}
+/* Nimbus Sans L: Regular Cond Italic*/
+@font-face {
+    font-family: 'Nimbus Sans RCI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/NimbusSanL-ReguCondItal.ttf) format('truetype');   
+}
+
+
+/* ---------------- ARCHIVO NARROW ---------------- */
+
+/* Archivo Narrow: Bolt  */
+@font-face {
+    font-family: 'Archivo Narrow B';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-Bold.ttf) format('truetype');   
+}
+/* Archivo Narrow: Bolt Italic  */
+@font-face {
+    font-family: 'Archivo Narrow BT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-BoldItalic.ttf) format('truetype');   
+}
+/* Archivo Narrow: Italic  */
+@font-face {
+    font-family: 'Archivo Narrow I';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-Italic.ttf) format('truetype');   
+}
+/* Archivo Narrow: Medium  */
+@font-face {
+    font-family: 'Archivo Narrow M';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-Medium.ttf) format('truetype');   
+}
+/* Archivo Narrow: Medium Italic  */
+@font-face {
+    font-family: 'Archivo Narrow MI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-MediumItalic.ttf) format('truetype');   
+}
+/* Archivo Narrow: Regular  */
+@font-face {
+    font-family: 'Archivo Narrow R';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-Regular.ttf) format('truetype');   
+}
+/* Archivo Narrow: SemiBolt   */
+@font-face {
+    font-family: 'Archivo Narrow SB';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-SemiBold.ttf) format('truetype');   
+}
+/* Archivo Narrow: SemiBolt Italic  */
+@font-face {
+    font-family: 'Archivo Narrow SBI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/ArchivoNarrow-SemiBoldItalic.ttf) format('truetype');   
+}
+
+
+/* ---------------- HELVETICA NEUE LT STD ---------------- */
+
+/* Helvetica Neue LT Std 47  */
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_47';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'),
+    	 url(../fonts/HelveticaNeueLTStd-LtCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_47_(2)';/*cursiva*/
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-LtCnO.otf) format('opentype');
+    }
+/*  Helvetica Neue LT Std 77  */
+@font-face {	
+    font-family: 'Helvetica_Neue_LT_Std_77';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-BdCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_77_(2)';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-BdCnO.otf) format('opentype');
+    }
+/*  Helvetica Neue LT Std 87  */
+@font-face {    
+    font-family: 'Helvetica_Neue_LT_Std_87';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-HvCn.otf) format('opentype');
+    }
+@font-face {
+    font-family: 'Helvetica_Neue_LT_Std_87_(2)';
+    font-style: normal;
+    font-weight: normal;
+    src: local('?'), url(../fonts/HelveticaNeueLTStd-HvCnO.otf) format('opentype');   
+}
+
+
+
+
+
+
+
+
+
+/* ------------------ Formats 	------------------ *
+src: local('Helvetica Neue LTStd'),
+		 url(opensans.eot) format('embedded-opentype'),
+         url(opensans.ttf) format('truetype'),
+         url(opensans.otf) format('opentype'),
+         url(opensans.woff) format('woff');
+*/

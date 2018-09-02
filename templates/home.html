@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+	<meta charset="UTF-8">
+	<title>{% block page_tittle %}{% endblock%}</title>
+  <!-- Icono Web -->
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/font-awesome.min.css' %}">
+
+  <!-- Estilo Home -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_home.css'%}">
+
+  <link id="tema" rel="stylesheet" type="text/css" href=""> 
+
+</head>
+<body>
+  <!-- Home-->
+    <!-- Panel superior -->
+    <div class="panel_sup">
+      <header class="header">        
+        <div class="contain ">
+
+          <!-- Logo Izquierda -->
+          <img src="{% static 'img/logo.png' %}" alt="">
+
+          <!-- Usuario Derecha -->
+          <span class="username_home">{{ user.get_username }}<br><span>Online</span></span>
+
+          <span class="user-pic">
+            <img  src="{% static 'img/avatar-user.png' %}" alt="User picture">
+          </span>
+
+        </div>
+      </header>
+    </div>
+
+    <!-- Menu Lateral Izquierdo-->
+    <nav class="menu-left">
+      <ul>
+        <!-- Opcion 1 -->
+        <li>
+          <a href="#">
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+            <span class="nav-text"> Home </span>
+          </a>
+        </li>
+        <!-- Opcion 2 -->
+        <li>
+          <a href="#">
+            <i class="fa fa-search fa-2x"></i>
+            <span class="nav-text"> Search </span>
+          </a>
+        </li>
+        <!-- Opcion 3 -->
+        <li>
+          <a href="#">
+            <i class="fa fa-folder-open fa-2x"></i>
+            <span class="nav-text"> Radiated </span>
+          </a>
+        </li>
+        <!-- Opcion 4 -->
+        <li>
+          <a href="#">
+            <i class="fa fa-file fa-2x"></i>
+            <span class="nav-text"> File </span>
+          </a>
+        </li>
+        <!-- Opcion 5 -->
+        <li>
+          <a href="#">
+            <i class="fa fa-comments fa-2x"></i>
+            <span class="nav-text"> Comments </span>
+          </a>
+        </li>
+      </ul>
+      <!-- Footer Menu -->
+      <ul class="footer_menu">
+        <li>
+           <a href="">
+                 <i class="fa fa-cogs fa-2x"></i>
+                <span class="nav-text"> configuration </span>
+            </a>
+        </li>
+        <li>
+           <a href="">
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text"> Logout </span>
+            </a>
+        </li>
+        <li>
+           <a href="#">
+                 <i class="fa fa-trash fa-2x"></i>
+                <span class="nav-text"> Trash </span>
+            </a>
+        </li>
+      </ul>
+  	</nav>
+  
+  <div class="content_home">
+    {% block content %}
+  
+    {% endblock %}
+  </div>
+
+
+
+  <!-- JavaScript Bootstrap  -->
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- Theme for url  -->
+  <script>
+    $(function(){
+      switch(getParameterByName("style")){
+        case "1": $("#tema").attr("href","{% static 'css/session/blue.css' %}"); break;
+        case "2": $("#tema").attr("href","{% static 'css/session/green.css' %}"); break;
+        case "3": $("#tema").attr("href","{% static 'css/session/orange.css' %}"); break;
+        case "4": $("#tema").attr("href","{% static 'css/session/red.css' %}"); break;
+        case "5": $("#tema").attr("href","{% static 'css/session/yellow.css' %}"); break;
+        case "6": $("#tema").attr("href","{% static 'css/session/brown.css' %}"); break;
+      }
+    });
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+  </script>
+</body>
+</html>

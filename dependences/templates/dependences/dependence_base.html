@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles %}
+	<meta charset="UTF-8">
+	<title>{% block page_title %}{% endblock%}</title>
+	<!-- Responsive -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+	<!-- CSS LOGIN -->
+	<link rel="stylesheet" type="text/css" 	href="{% static 'css/style_login.css' %}">
+	{% block other_styles %}{% endblock%}
+</head>
+
+<body>
+	
+	<!-- JS  -->
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+	{% block content%}
+	{% endblock %}
+</body>
+</html>

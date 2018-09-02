@@ -1,0 +1,63 @@
+{%  extends "users/base.html" %}
+
+{% block page_tittle %}
+	Confirm New Password
+{% endblock %}
+
+{% load staticfiles %}  
+{% block content%}
+
+<div class="main row">
+{% if validlink %}		
+	<form class="form" method="POST">
+	{% csrf_token %}			
+		<div class="contain_form  reset_pass">
+			<fieldset class="login_fieldset">
+				<div class="container col-12 col-sm-12 col-md-12	col-lg-12 col-xl-12">
+
+				<div class="contain">
+					<h1> <img src="{% static 'img/logo.png' %}" alt=""></h1>
+				</div>
+				<hr>
+
+				<div class="columns_div step_reset_pass"> 					
+					<h2>New Password</h2>
+					<br><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+					<br><br>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						{{form.new_password1.errors }}
+						<label for="id_new_password1">New Password: </label>
+						{{form.new_password1 }}
+						<div>
+							<input type="password">
+						</div>								
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						{{form.new_password2.errors }}
+						<label for="id_new_password2"> Confirm Password: </label>
+						{{form.new_password2}}
+						<div>
+							<input type="password" >
+						</div>									
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<div>
+							<input type="submit" value="Change password">
+						</div>		
+					</div>
+					<br>				
+				</div>
+			</div>							
+		</fieldset>					
+	</form>
+	{% else %}
+		<header class="step_reset_pass">
+			<br><br>
+			<h3>INVALID LINK</h3>
+			<p>this link has already been used</p><br><br><br><br>
+		</header>
+	{%endif%}
+</div>
+{% endblock %}

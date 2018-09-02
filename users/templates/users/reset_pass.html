@@ -1,0 +1,43 @@
+{%  extends "users/base.html" %}
+
+{% block page_tittle %}
+	Reset your password
+{% endblock %}
+
+{% load staticfiles %}  
+{% block content%}
+<div class="main row">		
+	<form class="form" method="POST">
+	{% csrf_token %}		
+		<div class="contain_form  reset_pass">
+			<fieldset class="login_fieldset">
+				<div class="container col-12 col-sm-12 col-md-12	col-lg-12 col-xl-12">
+					<div class="contain">
+						<h1> <img src="{% static 'img/logo.png' %}" alt=""></h1>
+					</div>
+					<hr>
+					<div class="columns_div">
+						<br>
+						<h2>Reset your password</h2>
+						<br><br>
+						<p>Enter your email address and we will send you a link to reset your password.</p>
+						<br><br>
+						{{ form.email.errors }}
+						<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+							<div>								
+								<!--<input type="email" placeholder="Enter your email address">-->
+								{{ form.email }}
+							</div>									
+						</div>
+						<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+							<div>
+								<input type="submit" value="Send password reset email">
+							</div>		
+						</div>
+						<br>				
+					</div>
+				</div>							
+		</fieldset>					
+	</form>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{%  extends "users/base.html" %}
+
+{% block page_tittle %}Login {% endblock %}
+
+{% load staticfiles %}  
+{% block content %}
+  <div class="row">
+    <form class="form" method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="contain_form">
+      <fieldset class="login_fieldset">
+        <div class="contain">
+          <h1> <img src="{% static 'img/logo.png' %}" alt=""></h1>
+        </div>
+        <hr>
+        <div class="columns_div">
+          <!-- -->
+              {% if form.errors %}
+                <p class="warning_registry">Your username and password didn't match. Please try again.</p>
+                {% endif %}
+                {% if next %}
+                  {% if user.is_authenticated %}
+                    <p class="warning_registry">Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                  {% else %}
+                      <p class="warning_registry">Please login to see this page.</p>
+                  {% endif %}
+                {% endif %}
+              <!-- -->
+
+          <label>{{form.username.label_tag}} 
+            <div class="tooltip1">
+              <span class="tooltip_ask">?
+                <span class="tooltiptext">Lorem ipsum dolor sit amet
+                </span>
+              </span>
+            </div>
+          </label>   
+          {{ form.username }}  
+          <!--<<input type="text" id="">-->
+          <label>{{form.password.label_tag}}
+            <div class="tooltip1">
+              <span class="tooltip_ask">?
+                <span class="tooltiptext">Lorem ipsum dolor sit amet
+                </span>
+              </span>
+            </div>
+          </label>{{ form.password }}
+          <!--<input type="password" id="">-->
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <a href="{% url 'register_1' %}"><span>Register</span></a>
+              <input type="submit" value="Sing In">
+            </div>            
+          </div>  
+          <br>
+          <a href="{% url 'reset' %}" class="forget">Did you forget your password?</a>
+        </div>              
+      </fieldset> 
+    </div>  
+  </form>
+  </div>
+{% endblock %}

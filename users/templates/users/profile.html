@@ -1,0 +1,19 @@
+{% extends 'home.html'%}
+
+{% block page_tittle %}Home{% endblock%}
+
+{% block user_name %}
+  <!-- Collapsible content -->    
+   {% if user.is_authenticated %}
+         {{ user.get_username }}
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+   {% endif %} 
+{% endblock%}
+
+{% block status_user %}Online{% endblock%}
+
+{% block content %}
+
+
+{% endblock %}

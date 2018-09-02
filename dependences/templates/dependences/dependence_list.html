@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-10">
+    <h2 class="text-center">Dependencias</h2>
+    <div class="row">
+      {% if dependences %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">codigo</th>
+            <th scope="col">iniciales</th>
+            <th scope="col">nombre</th>
+          </tr>
+        </thead>
+	<tbody>
+      {% for dependence in dependences %}
+      	  <tr>
+	    <td scope="row">{{ dependence.id }}</td>
+	    <td>{{ dependence.code }}</td>
+	    <td>{{ dependence.initials }}</td>
+	    <td>{{ dependence.name }}</td>
+	    <td><a class="btn btn-primary" href="{% url 'dependences:edit' id_dependence=dependence.id %}">Editar</a></td>
+	    <td><a class="btn btn-danger" href="{% url 'dependences:delete' id_dependence=dependence.id %}">Eliminar</a></td>
+          </tr>	    
+      {% endfor %}
+      	</tbody>
+      </table>
+      {% else %}
+      <h1>No hay dependencias disponibles</h1>
+      {% endif %}
+    </div>
+    <div>
+	    <form method='POST' action='{% url 'dependences:search' %}'>
+		{% csrf_token %}
+		<p>Ingrese la palabra a buscar: <input name='key_word' type='text'></p>
+		<input type='submit' value='Buscar'>
+	</form>
+    </div>
+  </div>
+</div>
+

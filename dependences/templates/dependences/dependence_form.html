@@ -1,0 +1,76 @@
+{%  extends "dependences/dependence_base.html" %}
+
+{% block page_title %}New Dependence{% endblock %}
+
+{% load staticfiles %}
+      {% block content %}
+
+
+
+    <div class="contain_form">
+
+
+      <fieldset class="login_fieldset">
+        <div class="contain">
+          <h1><img src="{% static 'img/logo.png' %}" alt=""></h1>
+        </div>
+        <hr>
+
+        <div class="columns_div">
+
+
+          <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+
+
+                <form class="form" method="POST" >
+                  {% csrf_token %}
+
+                    <label for="{{form.code.name}}">{{form.code.label}}</label>
+                    {{form.code}}
+
+
+
+
+                  <label for="{{form.initials.name}}">{{form.initials.label}}</label>
+
+                  {{form.initials}}
+
+                  <label for="{{form.name.name}}">{{form.name.label}}</label>
+
+                  {{form.name}}
+
+                  <label for="{{form.parent.name}}">{{form.parent.label}}</label>
+
+                    {{form.parent}}
+                    <br>
+                    <br>
+                    <button class="btn btn-primary"  type="submit" href="{% url 'dependences:list' %}">Enviar</button>
+
+
+                   <a  href="{% url 'dependences:list' %}">Cancelar</a>
+
+
+                </form>
+
+
+             </div>
+
+           </div>
+
+
+
+
+         </div>
+
+
+       </div>
+      </fieldset>
+    </div>
+
+
+
+
+     {% endblock %}

@@ -1,0 +1,69 @@
+{%  extends "registration/base_registry.html" %}
+
+{% block page_tittle %}
+{% endblock %}
+
+{% load staticfiles %}
+{% block content%}
+	<div class="wrapper paso-3">
+		<!-- -->
+		<!-- Logo -->
+		<header class="header"> 
+			<div class="contain" >
+				<h1> <img src="{% static 'img/logo.png' %}" alt=""></h1>
+			</div>
+		</header>
+		<!-- Menu -->
+		<br>
+		<nav class="navar">
+			<span class="item active"><span>1</span> <span>Account Setup</span></span>
+			<span class="item active"><span>2</span> <span>Personal Details</span></span>
+			<span class="item active"><span>3</span> <span>Employment Information</span></span>
+			<span class="item "><span>4</span> <span>Finalize</span></span>
+		</nav>
+		
+		<div class="contain content">			
+			<!-- Formulario -->
+			<form class="form" method="POST">
+				{% csrf_token %} 
+				<!-- Mensaje principal -->
+				<header>
+					<br><br>
+					<h2>Employment Information</h2><!-- Título: configuración de la cuenta -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus vero autem vel blanditiis eveniet culpa! Omnis, voluptate. Maiores, soluta quae odio culpa veniam assumenda reiciendis dolorum architecto. Repudiandae, porro, sed!</p><br><br><!-- Párrafo -->
+				</header>
+				<fieldset>
+					<div class="main row">
+						<div class="columns_div col-12 col-sm-12 col-md-4	col-lg-4 col-xl-4">
+						<label>RH <span class="tooltip_ask"> ?</span></label>
+						<select id="document_type">
+							<option value="" >--Select--</option>
+							<option value="">O - </option> 
+							<option value="">O - </option> 
+							<option value="">O + </option>
+							<option value="">A - </option>
+							<option value="">A + </option> 
+							<option value="">B - </option>
+							<option value="">B + </option>
+							<option value="">AB - </option> 
+							<option value="">AB + </option>
+						</select>
+						</div>
+						<div class="columns_div col-12 col-sm-12 col-md-4	col-lg-4 col-xl-4">
+							<label>EPS <span class="tooltip_ask"> ?</span></label>
+							<input type="text" name="last_name" id="">	
+						</div>
+						<div class="columns_div col-12 col-sm-12 col-md-4	col-lg-4 col-xl-4">
+							<label>ARP <span class="tooltip_ask"> ?</span></label>
+							<input type="text" name="document_number" id="">
+						</div>						
+					</div>										
+				</fieldset>
+				<input type="submit" value="Previous">
+				<input type="submit" value="Next">
+			</form>
+		</div>
+	</div>
+
+	
+{% endblock%}

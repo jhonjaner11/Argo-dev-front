@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-10">
+    <h2 class="text-center">Personas</h2>
+    <div class="row">+
+
+      {% if persons %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">doc</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+	<tbody>
+      {% for person in persons %}
+      	  <tr>
+	    <td scope="row">{{ person.document_number }}</td>
+	    <td>{{ person.first_name }}</td>
+	    <td>{{ person.last_name }}</td>
+	    <td>{{ person.email }}</td>
+	    <td><a class="btn btn-primary" href="{% url 'users:edit_person' id_person=person.id %}">Editar</a></td>
+	    <td><a class="btn btn-danger" href="{% url 'users:delete_person' id_person=person.id %}">Eliminar</a></td>
+          </tr>
+      {% endfor %}
+      	</tbody>
+      </table>
+      {% else %}
+      <h1>No hay personas disponibles</h1>
+      {% endif %}
+    </div>
+    <div>
+	    <form method='POST' action='{% url 'users:search_person' %}'>
+		{% csrf_token %}
+		<p>Ingrese la palabra a buscar: <input name='key_word' type='text'></p>
+		<input type='submit' value='Buscar'>
+	</form>
+    </div>
+  </div>
+</div>

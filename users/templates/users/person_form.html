@@ -1,0 +1,14 @@
+{% block content %}
+<form method='POST'>
+	{% csrf_token %}
+	<label for="{{form.first_name.name}}">{{form.first_name.label}}</label>
+	{{form.first_name}}
+	<label for="{{form.last_name.name}}">{{form.last_name.label}}</label>
+	{{form.last_name}}
+	<label for="{{form.email.name}}">{{form.email.label}}</label>
+	{{form.email}}
+	<label for="{{form.document_number.name}}">{{form.document_number.label}}</label>
+	{{form.document_number}}
+	<button type="submit">Crear</button>
+</form>
+{% endblock %}

@@ -1,0 +1,83 @@
+{%  extends "registration/base_registry.html" %}
+
+{% block page_tittle %}
+{% endblock %}
+
+{% load staticfiles %}
+{% block content%}
+	<div class="wrapper paso-2">
+		<!-- Logo -->
+		<header class="header"> 
+			<div class="contain">
+				<h1> <img src="{% static 'img/logo.png' %}" alt=""></h1>
+			</header>
+		<!-- Menu -->
+		<br>
+		<nav class="navar">
+			<span class="item active"><span>1</span> <span>Account Setup</span></span>
+			<span class="item active"><span>2</span> <span>Personal Details</span></span>
+			<span class="item "><span>3</span> <span>Employment Information</span></span>
+			<span class="item "><span>4</span> <span>Finalize</span></span>
+		</nav>
+		
+		<div class="contain content">
+			<!-- Formulario -->
+			<form class="form" method="POST">
+				{% csrf_token %} 
+				<!-- Mensaje principal -->
+				<header>
+					<br><br>
+					<h2>Personal Details</h2><!-- Título: configuración de la cuenta -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus vero autem vel blanditiis eveniet culpa! Omnis, voluptate. Maiores, soluta quae odio culpa veniam assumenda reiciendis dolorum architecto. Repudiandae, porro, sed!</p><br><br><!-- Párrafo -->
+				</header>
+				<fieldset>	
+					<!-- Fila 1 -->
+					<div class="main row">
+						<div class="columns_div col-12 col-sm-6 col-md-4	col-lg-4 col-xl-4">	
+							<label>Gender <span class="tooltip_ask"> ?</span></label>
+							<div class="gender">
+							    <input type="radio" value="None" id="male" checked/>
+							    <label for="male" class="radio" > Male </label>
+							    <input type="radio" value="None" id="female" />
+							    <label for="female" class="radio"> Female </label>
+						  	</div> 					
+
+							<label>Birth Date <span class="tooltip_ask"> ?</span></label>
+							<div class="birth_date">							
+								<input type="text" placeholder="DD" class="small">
+								<input type="text" placeholder="MM" class="small">
+								<input type="text" placeholder="YYYY" class="small">
+							</div>
+						</div>
+						<div class="columns_div col-12 col-sm-6 col-md-4	col-lg-4 col-xl-4">	
+							<label>Dependence <span class="tooltip_ask"> ?</span></label>
+							<select name="" id="" name="dependence" >
+								<option value="" >--Select--</option>
+							</select>
+							<label>Appointment <span class="tooltip_ask"> ?</span></label>
+							<input type="text" name="appointment" id="">
+						</div>					
+						<div class="columns_div col-12 col-sm-6 col-md-4	col-lg-4 col-xl-4">
+							<label>Department <span class="tooltip_ask"> ?</span></label>
+							<select id="" name="department">
+								<option value="" >--Select--</option>
+							</select>
+							<label>City <span class="tooltip_ask"> ?</span></label>
+							<select id="" name="city">
+								<option value="" >--Select--</option>
+							</select>
+						</div>
+						<div class="columns_div all col-12 col-sm-6 col-md-12	col-lg-12 col-xl-12">	
+							<label>Details <span class="tooltip_ask"> ?</span></label>
+							<textarea name="" id="" cols="30" rows="10">			
+							</textarea>
+						</div>
+					</div>
+				</fieldset>
+					<input type="submit" value="Previous">	
+					<input type="submit" value="Next">					
+			</form>
+		</div>
+	</div>
+{% endblock%}
+

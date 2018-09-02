@@ -1,0 +1,41 @@
+{%  extends "registration/base_registry.html" %}
+
+{% block page_tittle %}
+{% endblock %}
+
+{% load staticfiles %}
+{% block content%}
+	<div class="wrapper paso-4">
+		<!-- -->
+		<!-- Logo -->
+		<header class="header"> 
+			<div class="contain">
+				<h1> <img src="{% static 'img/logo.png' %}" alt=""></h1>
+			</div>
+		</header>
+		<!-- Menu -->
+		<br>
+		<nav class="navar">
+			<span class="item active"><span>1</span> <span>Account Setup</span></span>
+			<span class="item active"><span>2</span> <span>Personal Details</span></span>
+			<span class="item active"><span>3</span> <span>Employment Information</span></span>
+			<span class="item active"><span>4</span> <span>Finalize</span></span>
+		</nav>
+		
+		<div class="contain content">			
+			<!-- Formulario -->
+			<form class="form">
+				{% csrf_token %} 
+				<!-- Mensaje principal -->
+				<header>
+					<br><br><br><br>
+					<h2>Finalize</h2><!-- Título: configuración de la cuenta -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus vero autem vel blanditiis eveniet culpa! Omnis, voluptate. Maiores, soluta quae odio culpa veniam assumenda reiciendis dolorum architecto. Repudiandae, porro, sed!</p><!-- Párrafo -->
+				</header>
+				<br><br><br><br>
+				<a href="{% url 'login' %}" class="btn">Finalize</a>		
+			</form>
+		</div>
+	</div>
+	
+{% endblock%}

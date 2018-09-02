@@ -1,0 +1,334 @@
+@import url(fonts.css);
+
+/* -------- RESET -------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+* { box-sizing:border-box;}
+
+input, select, textarea {
+margin: 0;
+padding: 0;
+font:400 13px/1 'Roboto';
+}
+/* -------- ************************************* -------- */
+body{
+/*background: rgba(19, 35, 47, 0.9);*/
+background: #ededed;
+font-family: 'Archivo Narrow R';
+}
+
+fieldset{
+margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+
+  display: block;
+  -webkit-margin-start: 2px;
+  -webkit-margin-end: 2px;
+  -webkit-padding-before: 0.35em;
+  -webkit-padding-start: 0.75em;
+  -webkit-padding-end: 0.75em;
+  -webkit-padding-after: 0.625em;
+  min-width: -webkit-min-content;
+}
+
+/* -------- Estilo Home -------- */
+
+/* header */
+div.contain{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px inset #8c8b8b; /*Borde inferior div*/
+}
+
+.contain img{
+  left: 2%;
+  position: relative;
+  height: 80%;
+  align-items: center;;
+}
+
+
+/* iconos */
+.fa-2x {
+font-size: 2em;
+}
+
+.fa-5x {
+font-size: 5em;
+}
+
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+/* Menu */
+.menu-left {
+  font-family: 'Archivo Narrow B';
+  background:#583e7e;
+  border-right:1px solid #583e7e;
+  position:absolute;
+  top:50px;
+  bottom:0;
+  left:0;
+  width:60px;
+  overflow:hidden;
+  -webkit-transition:width .05s linear;
+  transition:width .05s linear;
+  -webkit-transform:translateZ(0) scale(1,1);
+  z-index:1000;
+}
+
+.menu-left>ul {
+margin:20px 0;
+}
+
+.menu-left li>a {
+  position:relative;
+  display:table;
+  border-collapse:collapse;
+  border-spacing:0;
+  color:#fff;
+  font-size: 14px;
+  text-decoration:none;
+  -webkit-transform:translateZ(0) scale(1,1);
+  -webkit-transition:all .1s linear;
+  transition:all .1s linear;
+}
+
+/* Expandir menu */
+.menu-left:hover, nav.menu-left.expanded {
+  width:190px;
+  overflow:visible;
+}
+
+.menu-left .nav-text {
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  width:130px;
+}
+
+.menu-left li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.menu-left a:hover,.menu-left a:focus {
+text-decoration:none;
+border-left: 5px solid;
+}
+
+nav ul,nav li {
+  outline:0;
+  margin:0;
+  padding:0;
+}
+
+.menu-left li:hover>a,nav.menu-left.active>a{
+color:#583e7e;
+background-color:#dccdf9;
+}
+
+/* Menu Footer */
+.menu-left>ul.footer_menu {
+  position:absolute;
+  left:0;
+  bottom:0;
+}
+/* ----------- Content Home ----------- */
+
+div.content_home{
+    height: 100%;
+    width: 100%;
+    padding-left: 80px;
+    position: fixed;
+}
+
+/* ----------- Photo User + info ----------- */
+
+span.username_home, .user-pic img{
+  position:relative; 
+  margin-right: 30px;
+  float: right;
+  display: inline-block;
+  justify-content: space-between;  
+
+}
+
+.user-pic img{
+  background: #9F9F9F;  
+  border-radius: 50% ;
+  vertical-align: middle;
+}
+
+span.username_home{
+  margin-top: 5px;
+  font-family: 'Archivo Narrow B';
+  font-size: 20px;
+  text-align: center;
+  text-indent: inherit;
+}
+
+.username_home span:last-child{
+  font-family: 'Archivo Narrow R';
+  color: #9F9F9F;
+  font-size: 15px;
+  justify-content: space-between;  
+}
+
+
+/* -------- Menu Usuario -------- */
+
+
+/* Imagen de perfil */
+.contain-photo img{
+  align-items: center;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  left: 2%;
+  position: relative;
+}
+
+/* ----------- Menu ----------- */
+
+.menu-right {
+  background:#583e7e;
+  border-right:1px solid #583e7e;
+  bottom:2px;
+  color:#fff;
+  padding-top: 20px;
+  position:absolute;
+  right:5px;
+  text-align: center;  
+  top:60px;
+  width:180px;
+  z-index:1000;
+  overflow:hidden;
+  -webkit-transition:width .05s linear;
+  transition:width .05s linear;
+  -webkit-transform:translateZ(0) scale(1,1);
+
+}
+
+.menu-right span {
+  line-height: 1.2em;
+}
+
+.menu-right span h1{
+  font-family: 'Archivo Narrow B';
+  font-size: 18px;
+}
+.menu-right span h2{
+  font-family: 'Archivo Narrow SB';
+  font-size: 15px;
+}
+.menu-right span h3{
+  font-family: 'Archivo Narrow R';
+  font-size: 12px;
+}
+
+.menu-right hr{
+  border-top: 1px solid #fff;
+}
+
+.menu-right >ul {  
+  margin:20px 0;  
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu-right .nav-text {
+    text-align: left;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 130px;
+}
+
+.menu-right li>a, .menu-right a {
+  position:relative;
+  display:table;
+  border-collapse:collapse;
+  border-spacing:0;
+  color:#fff;
+  font-size: 14px;
+  text-decoration:none;
+  -webkit-transform:translateZ(0) scale(1,1);
+  -webkit-transition:all .1s linear;
+  transition:all .1s linear;
+}
+
+.notifications-panel { 
+  background: #583e7e;
+  justify-content: space-between;
+  display: flex;  
+  flex: 1;
+  border-top: #fff 1px solid;
+  position: absolute;
+  bottom: 0px;
+}
+.notifications-panel a{
+  /*border-right:#dccdf9 1px solid;
+  border-left:#dccdf9 1px solid;*/
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
