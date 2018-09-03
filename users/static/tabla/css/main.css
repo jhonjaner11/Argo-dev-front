@@ -115,7 +115,7 @@ fieldset{
 
 .container-table100 {
   width: 100%;
-  min-height: 100vh;
+  min-height: 75vh;
   background: #ededed;
   /*background: -webkit-linear-gradient(45deg, #000000, #585858);
   background: -o-linear-gradient(45deg, #000000, #585858);

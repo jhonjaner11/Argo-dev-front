@@ -37,7 +37,7 @@
 						<thead>
 							<tr class="table100-head">
 
-								<th scope="col" class="column2">Id</th>
+								<th scope="row" class="column2">Id</th>
 					            <th scope="col" class="column1">Codigo</th>
 					            <th scope="col"class="column1">Iniciales</th>
 					            <th scope="col" class="column1">Nombre</th>
@@ -63,22 +63,68 @@
 				    	<h1>No hay dependencias disponibles</h1>
 				    {% endif %}
 				</div>
+				<br>
+				<div class="row justify-content-around">
+						<div class="col-4">
+            				<div class="card card-body mb-2">
+		            			<form method='POST' action='{% url 'dependences:search' %}'>
+									
 
+									<p>Ingrese la palabra a buscar: 
+										{% csrf_token %} 	
+										<input name='key_word' type='text'>
+									</p>
+									<input type='submit' value='Buscar'> 					
+								</form>
+            				</div>
+        				</div>
+        				<div class="col-4" class=" contain_form">
+            				<div class="card card-body mb-2">
+		            			<button id="btnNuevo" >	Nuevo </button>
+
+
+
+					            	<form id= "cosota" method='POST'> 
+					            		{% csrf_token %} 	
+									
+										<label for="{{form.code.name}}">codigo</label>
+                   					 	<!--<input id="id_code" name="code" type="text">-->
+                   					 	{{Dependence.code}}
+
+										<label for="{{dependence.name}}">nombres</label> 	
+										<input id="id_name" name="name" type="text">
+										{{ form.name}}
+
+										<label for="{{dependence.initials.name}}">iniciales {{dependence.initials.label}}</label> 	
+										<input id="id_initials" name="initials" type="text">
+										{{dependence.initials}} 	
+
+									
+										<label for="{{dependence.name.name}}">{{dependence.name.label}}</label> 	
+
+										
+
+								
+
+									<button class="btn btn-primary"  type="submit" href="{% url 'dependences:list' %}">Enviar</button>
+
+								</form> 
+					            
+
+            				</div>
+        				</div>
+						
+					</div>
+ 
 				
-
-
-				<div>
-	    			<form method='POST' action='{% url 'dependences:search' %}'>
-						{% csrf_token %}
-						<p>Ingrese la palabra a buscar: <input name='key_word' type='text'></p>
-						<input type='submit' value='Buscar'>
-					</form>
-   				</div>
+				
 			</div>
 		</div>
 	</div>
 
 	
+	
+
 
 	<script>
 
@@ -100,26 +146,10 @@
 
 	</script>
 
-	<form id= "cosota" method='POST'> 
+	
 
-			{% csrf_token %} 	
-				
-			<label>{{dependences.code.label}}</label> 	
-			{{ dependences.code }}
 
-			<label for="{{dependences.initials.name}}">{{dependences.initials.label}}</label> 	
 
-			{{dependences.initials}} 	
-
-			<label for="{{dependences.name.name}}">{{dependences.name.label}}</label> 	
-
-			{{dependences.name}} 	
-
-			
-
-			<button class="btn btn-primary"  type="submit" href="{% url 'dependences:list' %}">Enviar</button>
-
-	</form> 
 
 	
 
@@ -134,7 +164,7 @@
 
 
 	<script src="{% static 'tabla/js/main.js'%}"></script>
-	<button id="btnNuevo" >	Nuevo </button>
+	
 
 
 	{% endblock %}
