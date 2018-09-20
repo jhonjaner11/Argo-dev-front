@@ -1,9 +1,71 @@
+{%  extends "dependences/dependence_base.html" %}
+
+
+{% load static %}
+
+	{% block other_styles %}
+
+	
+
+	
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'tabla/css/main.css'%}">
+<!--===============================================================================================-->
+{% endblock%}
+
 
 {% block content %}
-<form method="post">
-	{% csrf_token %}
-	<h3>¿Desea eliminar el registro de {{ dependence.name }}?</h3>
-	<button class="btn btn-danger" type="submit">Sí, eliminar</button>
-	<a class= "btn btn-default" href="{% url 'dependences:list' %}">Cancelar</a>
-</form>
+<div clase= "center">
+	
+	
+	<div class="row">
+		
+			<div class="col-md-4" >
+
+			<div class="formSombra"  >
+
+<center>
+	<form method="post">
+
+							{% csrf_token %}
+							<h3>¿Desea eliminar el registro de {{ dependence.name }}?</h3>
+							<br>
+							<button class="btn btn-danger" type="submit">Sí, eliminar</button>
+							<a class= "btn btn-default" href="{% url 'dependences:list' %}">Cancelar</a>
+						</form>
+</center>
+				
+
+						
+
+				
+			
+	   			
+								
+			</div>
+			
+
+		</div>
+		
+			
+
+		
+		
+		
+		
+
+	</div>
+
+
+</div>
+
+
+
+
+
+
+				
+ 
 {% endblock %}

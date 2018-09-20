@@ -14,21 +14,31 @@ def new_dependence(request):
     return render(request,'dependences/dependence_form.html',{'form':form})
 
 def list_dependences(request):
+     
     
     dependences = Dependence.objects.all()
-    context = {'dependences': dependences}
-    form = DependenceForm()
+    form = DependenceForm(request.POST)
+    context = {'dependences': dependences, 'form':form}
 
-
-
-    return render(request, 'dependences/dependence_list2.html',context)
+    if form.is_valid():
+        
+        form.save()
+        return redirect('dependences:list')
+    else:
+        form = DependenceForm()
+      
+       
+        
+    
+    return render(request, 'dependences/dependence_list2.html',context  )
 
 
 
 def search_dependences(request):
     try:
         dependences = Dependence.objects.filter(name__icontains=request.POST['key_word'])
-        context = {'dependences': dependences}
+        form = DependenceForm()
+        context = {'dependences': dependences, 'form':form}
         print(dependences)
     except Dependence.DoesNotExist:
         raise Http404("Question does not exist")

@@ -137,6 +137,48 @@ fieldset{
   width: 1170px;
 }
 
+
+.formSombra {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px 40px;
+
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  margin: 1 auto;
+  position: relative;
+
+  border: px solid #583e7e;
+  background: #e9e9e9;
+  border-radius: 30px;
+  /*Sombra del formulario********************************************************************** */
+  -webkit-box-shadow: -2px 3px 20px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 3px 20px -2px rgba(0,0,0,0.75);
+  box-shadow: -2px 3px 20px -2px rgba(0,0,0,0.75);
+
+ 
+}
+
+.formBorder{
+  padding: 30px 0;
+    border: 3px solid green;
+    text-align: center;
+
+  
+}
+
+
+
 table {
   border-spacing: 1;
   border-collapse: collapse;
@@ -161,7 +203,7 @@ table * {
   position: relative;
 }
 table td, table th {
-  padding-left: 8px;
+  padding-left: 4px;
 }
 table thead tr {
   height: 60px;

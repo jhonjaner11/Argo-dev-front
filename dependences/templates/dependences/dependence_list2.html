@@ -4,11 +4,11 @@
 
 <!--===============================================================================================-->
 	{% load static %}
-	{% load staticfiles %}
+
 
 	{% block other_styles %}
 
-	
+
 
 	<link rel="icon" type="image/png" href="{% static 'tabla/images/icons/favicon.ico'%}">
 <!--===============================================================================================-->
@@ -25,6 +25,19 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'tabla/css/util.css'%}">
 	<link rel="stylesheet" type="text/css" href="{% static 'tabla/css/main.css'%}">
 <!--===============================================================================================-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-confirm.min.css'%}">
+
+
+
+    <link rel="stylesheet" href="{% static 'simplemodal/Source/assets/css/simplemodal.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'simplemodal/Demos/assets/css/demo.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'simplemodal/Demos/assets/css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="{% static 'simplemodal/Demos/assets/javascript/mootools-core-1.3.1.js'%}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'simplemodal/Demos/assets/javascript/mootools-more-1.3.1.1.js'%}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'simplemodal/Source/simple-modal.js'%}" type="text/javascript" charset="utf-8"></script>
+	  <link rel="shortcut icon" type="image/png" href="http://simplemodal.plasm.it/apple-touch-icon.png" />
+
 {% endblock%}
 
 {% block content%}
@@ -37,7 +50,7 @@
 						<thead>
 							<tr class="table100-head">
 
-								<th scope="row" class="column2">Id</th>
+								<th scope="col" class="column2">Id</th>
 					            <th scope="col" class="column1">Codigo</th>
 					            <th scope="col"class="column1">Iniciales</th>
 					            <th scope="col" class="column1">Nombre</th>
@@ -51,10 +64,10 @@
 					    	    <td>{{ dependence.code }}</td>
 					    	    <td>{{ dependence.initials }}</td>
 					    	    <td>{{ dependence.name }}</td>
-					    	    <td><a class="btn btn-primary" href="{% url 'dependences:edit' id_dependence=dependence.id %}">Editar</a>
-					    	    <a class="btn btn-danger" href="{% url 'dependences:delete' id_dependence=dependence.id %}">Eliminar</a></td>
-					        </tr>
-        					{% endfor %}
+					    	    <td><button class="btn btn-primary" href="{% url 'dependences:edit' id_dependence=dependence.id %}">Editar</button>
+					    	    <button class="btn btn-danger" id="btnEliminar" data-url="{% url 'dependences:delete' id_dependence=dependence.id %}">Eliminar</button></td>
+			        </tr>
+    					{% endfor %}
 
 
 						</tbody>
@@ -66,95 +79,76 @@
 				<br>
 				<div class="row justify-content-around">
 						<div class="col-4">
-            				<div class="card card-body mb-2">
+            				<div class="formSombra" class="card card-body mb-2" >
 		            			<form method='POST' action='{% url 'dependences:search' %}'>
-									
 
-									<p>Ingrese la palabra a buscar: 
-										{% csrf_token %} 	
+
+									<p>Ingrese la palabra a buscar:
+										{% csrf_token %}
 										<input name='key_word' type='text'>
 									</p>
-									<input type='submit' value='Buscar'> 					
+									<br>
+									<center>
+											<button class="btn btn-primary" type="submit" value='Buscar'>Buscar</button>
+
+
+									</center>
+
+
 								</form>
             				</div>
         				</div>
-        				<div class="col-4" class=" contain_form">
-            				<div class="card card-body mb-2">
+
+        				<div class="col-4" >
+            				<div class="formSombra" class="card card-body mb-2">
+
 		            			<button id="btnNuevo" >	Nuevo </button>
 
 
 
-					            	<form id= "cosota" method='POST'> 
-					            		{% csrf_token %} 	
-									
-										<label for="{{form.code.name}}">codigo</label>
-                   					 	<!--<input id="id_code" name="code" type="text">-->
-                   					 	{{Dependence.code}}
+					            	<form id= "cosota" method="POST">
+					            		{% csrf_token %}
 
-										<label for="{{dependence.name}}">nombres</label> 	
-										<input id="id_name" name="name" type="text">
-										{{ form.name}}
+										<label for="{{form.code.name}}">{{form.code.label}}</label>
+                   					 	{{form.code}}
 
-										<label for="{{dependence.initials.name}}">iniciales {{dependence.initials.label}}</label> 	
-										<input id="id_initials" name="initials" type="text">
-										{{dependence.initials}} 	
 
-									
-										<label for="{{dependence.name.name}}">{{dependence.name.label}}</label> 	
+										<label for="{{form.initials.name}}">{{form.initials.label}}</label>
+                  						{{form.initials}}
 
-										
+                  						<label for="{{form.name.name}}">{{form.name.label}}</label>
+						                {{form.name}}
 
-								
-
-									<button class="btn btn-primary"  type="submit" href="{% url 'dependences:list' %}">Enviar</button>
-
-								</form> 
-					            
-
-            				</div>
+						                <label for="{{form.parent.name}}">{{form.parent.label}}</label>
+					                    {{form.parent}}
+					                    <br><br>
+										<center>
+											<button class="btn btn-primary" type="submit" href="{% url 'dependences:list' %}" >Enviar</button>
+									</center>
+								</form>
+							</div>
         				</div>
-						
-					</div>
- 
-				
-				
-			</div>
+				</div>
+ 			</div>
 		</div>
 	</div>
-
-	
-	
-
-
-	<script>
-
-			$( document ).ready(function() {
-
-				$("#cosota").hide()
-			    $("#btnNuevo").click(function(){ 
-
-
-				
-				$("#cosota").fadeIn()
-
-				;
-				})
-
-			    console.log( "ready!" );
-			});
-			
-
-	</script>
-
-	
+	<p id="jeje">jeje</p>
 
 
 
 
-	
+
+
+
+
+
+
+
 
 <!--===============================================================================================-->
 	<script src="{% static 'tabla/vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+	<script src="{% static 'js/jquery-confirm.min.js'%}"></script>
+
 <!--===============================================================================================-->
 	<script src="{% static 'tabla/vendor/bootstrap/js/popper.js'%}"></script>
 	<script src="{% static 'tabla/vendor/bootstrap/js/bootstrap.min.js'%}"></script>
@@ -164,7 +158,48 @@
 
 
 	<script src="{% static 'tabla/js/main.js'%}"></script>
-	
+
+	<script>
+			$( document ).ready(function() {
+
+				$("#cosota").hide()
+			    $("#btnNuevo").click(function(){
+
+
+
+				$("#cosota").fadeIn()
+
+				;
+				})
+
+			    console.log( "ready!" );
+			});
+
+
+	</script>
+
+	<script >
+
+
+		$("#btnEliminar").click(function(){
+			console.log( "eliminando" );
+			$.confirm({
+				title: 'sEGURO',
+					content: '',
+					buttons: {
+						ELIMINAR: function () {
+								// ajax y elimina :v
+						},
+						CANCELAR: function () {
+						}
+					}
+				});
+
+	});
+
+
+	</script>
+
 
 
 	{% endblock %}
